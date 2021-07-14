@@ -23,6 +23,18 @@ namespace DrawShape
 
             SKCanvas canvas = surface.Canvas;
 
+            IDrawShape shapePoints = new RectangleShape();
+            shapePoints.Draw();
+
+            float radius = 30;
+            int index = 1;
+            foreach (var point in shapePoints.DrawPoints)
+            {
+                var newPoint = RelateToOriginalPoint(point);
+                canvas.DrawCircle((float)newPoint.X, (float)newPoint.Y, radius, CircleColor);
+                canvas.DrawText($"{index}", (float)newPoint.X, (float)newPoint.Y, TextColor);
+                index++;
+            }
 
             // 由於是使用笛卡爾座標，因此畫面原點原本在左上角，因次要有一個轉換的函式
             Point RelateToOriginalPoint(Point point)
@@ -31,11 +43,12 @@ namespace DrawShape
                 int x = info.Width / 2;
                 int y = info.Height / 2;
 
+                // 中心點出發
                 return new Point(point.X + x, -point.Y + y);
             }
         }
 
-        public SKPaint StrokeColor = new SKPaint
+        public SKPaint CircleColor = new SKPaint
         {
             Style = SKPaintStyle.Stroke,
             Color = SKColors.Blue,
