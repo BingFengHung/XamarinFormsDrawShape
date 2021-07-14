@@ -11,12 +11,13 @@ Xamarin.Forms using SkiaSharp package to create drawing path
 - SkiaSharp.Views.Forms
 
 ## 圖形繪製
-###　直線點
+### 直線點
 目前直線點僅針對頭尾不算點的方式，以間隔方式計算出點。
 
 因為不計算頭尾，因此，將給定的點位數量 + 1，再拿他與長或寬去除，得到點與點之間的間距
 
 如下圖，圖片中共有六個點，由於有 7 個間隔，所以要用點數 + 1 的方式
+
 ![](./Images/2021-07-14-17-05-49.png)
 
 ```cs
@@ -51,8 +52,7 @@ private Point VerticalPath(Point lastPoint, int count, double length, int clocks
 ### 圓弧點
 點的位置會在圓弧的頭尾開始算，這邊主要使用三角函數去找出圓弧上對應的座標
 
-$$ X = 中心點 X + Radius * Cos(degree)$$ 
-$$ Y = 中心點 Y + Radius * Sin(degree)$$
+![](./Images/2021-07-14-18-13-26.png)
 
 ![](./Images/2021-07-14-17-43-56.png)
 
