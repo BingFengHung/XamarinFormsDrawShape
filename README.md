@@ -175,7 +175,7 @@ private void GetShapePoint(double radius, double rectangleWidth, double rectangl
 	dataPoint.AddRange(pointList); 
 }
 ```
-[<img src="./Images/2021-07-14-17-49-24.png" width="70%"/>](./Images/2021-07-14-17-49-24.png)
+[<img src="./Images/2021-07-14-17-49-24.png" width="30%"/>](./Images/2021-07-14-17-49-24.png)
 
 ## 未來
 未來可針對此功能，將想要的圖形，僅記錄圖形繪製的方式，就不用每次都要打開程式去修改參數。
