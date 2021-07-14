@@ -14,5 +14,10 @@ namespace DrawShape
         {
             InitializeComponent();
         }
+
+        private void OnCanvaViewPaintSurface(object sender, SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs e)
+        {
+
+        }
     }
 }
