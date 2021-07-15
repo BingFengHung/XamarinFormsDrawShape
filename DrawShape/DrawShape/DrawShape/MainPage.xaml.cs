@@ -28,6 +28,7 @@ namespace DrawShape
 
             float radius = 30;
             int index = 1;
+
             foreach (var point in shapePoints.DrawPoints)
             {
                 var newPoint = RelateToOriginalPoint(point);
